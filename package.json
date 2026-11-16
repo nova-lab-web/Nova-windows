@@ -30,12 +30,15 @@
       "target": [
         "portable",
         "nsis"
-      ],
-      "artifactName": "Nova-Consumption-${version}-${target}.${ext}"
+      ]
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "Nova-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Nova-Portable-${version}.${ext}"
     }
   }
 }
