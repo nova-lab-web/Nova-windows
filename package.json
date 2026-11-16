@@ -1,0 +1,41 @@
+{
+  "name": "nova-consumption",
+  "version": "1.0.0",
+  "description": "استهلاك نوفا",
+  "main": "main.js",
+  "author": "Nova Dental Lab",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.nova.consumption",
+    "productName": "استهلاك نوفا",
+    "files": [
+      "main.js",
+      "index.html",
+      "manifest.json",
+      "*.png",
+      "icon.ico"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "artifactName": "Nova-Consumption-${version}-${target}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
